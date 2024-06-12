@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 
 // Sample blog posts data
@@ -36,19 +36,8 @@ const blogPosts = [
 ];
 
 function App() {
-  // State variables
-  const [userName, setUserName] = useState("John Doe");
-  const [logoText, setLogoText] = useState("Fashion");
-
-  // Function to update userName
-  const updateUserName = () => {
-    setUserName("Jane Doe");
-  };
-
-  // Function to update logoText
-  const updateLogoText = () => {
-    setLogoText("Style");
-  };
+  const userName = "John Doe";
+  const logoText = "Fashion";
 
   return (
     <div className="App">
@@ -66,10 +55,6 @@ function App() {
             trends={post.trends}
           />
         ))}
-      </div>
-      <div className="button-container">
-        <button onClick={updateUserName}>Update User Name</button>
-        <button onClick={updateLogoText}>Update Logo Text</button>
       </div>
     </div>
   );
